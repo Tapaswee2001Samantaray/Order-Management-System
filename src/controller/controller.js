@@ -13,7 +13,7 @@ const createCustomer=async function(req,res){
         if(!name || !name.trim())return res.status(400).send({status:false,message:"name is mandaory"})
         if(!nameRegex.test(name.trim())) return res.status(400).send({status:false,message:"Invalid name, numbers are not allowed"})
 
-        const data=await customerModel.create(name)
+        const data=await customerModel.create({name:name})
         return res.status(201).send({status:true,message:"Success",data:data})
     }
     catch(err){

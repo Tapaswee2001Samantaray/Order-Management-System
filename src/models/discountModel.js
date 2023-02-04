@@ -1,5 +1,5 @@
-const mongoose = require("mongoose")
-const ObjectId = mongoose.Schema.Types.ObjectId
+const mongoose = require("mongoose");
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const discountSchema = new mongoose.Schema({
     orderId: {
@@ -14,5 +14,6 @@ const discountSchema = new mongoose.Schema({
         type: Number,
         default: 0
     }
-})
-module.exports = mongoose.model("Discount", discountSchema)
+});
+
+module.exports = mongoose.model("Discount", discountSchema);
